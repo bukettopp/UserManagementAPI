@@ -25,3 +25,24 @@ This project was developed, debugged, and enhanced with the help of Microsoft Co
 ### Run the API
 ```bash
 dotnet run
+🔐 Authentication
+Authorization: mysecrettoken
+📌 Endpoints
+GET /api/users?skip=0&take=50&search=ali → list users with pagination & search
+
+GET /api/users/{id} → get user by ID
+
+POST /api/users → create user
+
+PUT /api/users/{id} → update user
+
+DELETE /api/users/{id} → delete user
+
+UserManagementAPI/
+│── Program.cs
+│── Controllers/UsersController.cs
+│── Models/User.cs
+│── Middleware/
+│   ├── LoggingMiddleware.cs
+│   ├── ErrorHandlingMiddleware.cs
+│   └── AuthenticationMiddleware.cs
